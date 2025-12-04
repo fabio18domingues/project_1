@@ -1,0 +1,1778 @@
+{
+  "name": "SMART_M_LISBON_Tabular_Model",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "pt-PT",
+    "dataSources": [
+      {
+        "name": "SqlServer localhost SMART_M_LISBON",
+        "connectionString": "Provider=SQLNCLI11;Data Source=.;Initial Catalog=SMART_M_LISBON;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "VDIM_DATE",
+        "columns": [
+          {
+            "name": "DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "DAY",
+            "dataType": "int64",
+            "sourceColumn": "DAY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MONTH",
+            "dataType": "int64",
+            "sourceColumn": "MONTH",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FIRST_MONTH",
+            "dataType": "dateTime",
+            "sourceColumn": "FIRST_MONTH",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "MONTH_NAME",
+            "dataType": "string",
+            "sourceColumn": "MONTH_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "WEEK",
+            "dataType": "int64",
+            "sourceColumn": "WEEK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ISO_WEEK",
+            "dataType": "int64",
+            "sourceColumn": "ISO_WEEK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DAYOFWEEK",
+            "dataType": "int64",
+            "sourceColumn": "DAYOFWEEK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "QUARTER",
+            "dataType": "int64",
+            "sourceColumn": "QUARTER",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "YEAR",
+            "dataType": "int64",
+            "sourceColumn": "YEAR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FIRSTOFYEAR",
+            "dataType": "dateTime",
+            "sourceColumn": "FIRSTOFYEAR",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "STYLE112",
+            "dataType": "string",
+            "sourceColumn": "STYLE112",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "STYLE101",
+            "dataType": "string",
+            "sourceColumn": "STYLE101",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DATETIME",
+            "dataType": "dateTime",
+            "sourceColumn": "DATETIME"
+          },
+          {
+            "name": "FK_DATETIME",
+            "dataType": "string",
+            "sourceColumn": "FK_DATETIME"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_DATE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VDIM_DATE].*   FROM [dbo].[VDIM_DATE] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>80</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FK_DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>98</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DATE</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>56</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DAY</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>50</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>MONTH</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>66</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FIRST_MONTH</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>101</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>MONTH_NAME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>100</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>WEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>58</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ISO_WEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>82</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DAYOFWEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>92</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>QUARTER</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>78</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>YEAR</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>56</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FIRSTOFYEAR</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>99</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STYLE112</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>77</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STYLE101</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>77</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FK_DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DATE</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DAY</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>MONTH</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>4</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FIRST_MONTH</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>5</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>MONTH_NAME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>6</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>WEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>7</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>ISO_WEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>8</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DAYOFWEEK</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>9</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>QUARTER</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>10</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>YEAR</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>11</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FIRSTOFYEAR</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>12</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STYLE112</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>13</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STYLE101</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>14</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>FK_DATETIME</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnChecked>",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VDIM_DATE].*   FROM [dbo].[VDIM_DATE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_DATE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>80</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FK_DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>98</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DATE</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>56</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DAY</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>50</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>MONTH</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>66</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FIRST_MONTH</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>101</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>MONTH_NAME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>100</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>WEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>58</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ISO_WEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>82</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DAYOFWEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>92</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>QUARTER</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>78</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>YEAR</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>56</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FIRSTOFYEAR</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>99</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STYLE112</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>77</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STYLE101</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>77</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FK_DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DATE</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DAY</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>MONTH</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>4</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FIRST_MONTH</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>5</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>MONTH_NAME</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>6</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>WEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>7</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>ISO_WEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>8</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>DAYOFWEEK</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>9</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>QUARTER</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>10</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>YEAR</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>11</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FIRSTOFYEAR</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>12</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STYLE112</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>13</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STYLE101</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>14</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked>",
+              "    <item>",
+              "      <key>",
+              "        <string>DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>FK_DATETIME</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnChecked>",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "VDIM_EVENTS",
+        "columns": [
+          {
+            "name": "ID_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_EVENT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ADRESS",
+            "dataType": "string",
+            "sourceColumn": "ADRESS",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "S_ADRESS",
+            "dataType": "string",
+            "sourceColumn": "S_ADRESS",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CODE",
+            "dataType": "string",
+            "sourceColumn": "CODE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "EVENT_NAME",
+            "dataType": "string",
+            "sourceColumn": "EVENT_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TYPE_COORD",
+            "dataType": "boolean",
+            "sourceColumn": "TYPE_COORD",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "EVENT_START_DATE",
+            "dataType": "int64",
+            "sourceColumn": "EVENT_START_DATE",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "EVENT_CATEGORY",
+            "dataType": "string",
+            "sourceColumn": "EVENT_CATEGORY",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "EVENT_CATEGORY_ID",
+            "dataType": "int64",
+            "sourceColumn": "EVENT_CATEGORY_ID",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "EVENT_END_DATE",
+            "dataType": "int64",
+            "sourceColumn": "EVENT_END_DATE",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "EVENT_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "EVENT_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_EVENTS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[VDIM_EVENTS].* FROM [dbo].[VDIM_EVENTS] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[VDIM_EVENTS].* FROM [dbo].[VDIM_EVENTS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_EVENTS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VDIM_TIME",
+        "columns": [
+          {
+            "name": "ID_TIME",
+            "dataType": "int64",
+            "sourceColumn": "ID_TIME",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TIME",
+            "dataType": "dateTime",
+            "sourceColumn": "TIME",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "COD_TIME",
+            "dataType": "string",
+            "sourceColumn": "COD_TIME",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "HOUR",
+            "dataType": "int64",
+            "sourceColumn": "HOUR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MINUTE",
+            "dataType": "int64",
+            "sourceColumn": "MINUTE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "AMPM",
+            "dataType": "string",
+            "sourceColumn": "AMPM",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DAY_PART_EN",
+            "dataType": "string",
+            "sourceColumn": "DAY_PART_EN",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DAY_PART_PT",
+            "dataType": "string",
+            "sourceColumn": "DAY_PART_PT",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "HOUR_FROM_TO_12",
+            "dataType": "string",
+            "sourceColumn": "HOUR_FROM_TO_12",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "HOUR_FROM_TO_24",
+            "dataType": "string",
+            "sourceColumn": "HOUR_FROM_TO_24",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NOTATION_12",
+            "dataType": "string",
+            "sourceColumn": "NOTATION_12",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "NOTATION_24",
+            "dataType": "string",
+            "sourceColumn": "NOTATION_24",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_TIME",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[VDIM_TIME].* FROM [dbo].[VDIM_TIME] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[VDIM_TIME].* FROM [dbo].[VDIM_TIME] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_TIME"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VDIM_LOGOS",
+        "columns": [
+          {
+            "name": "DISPLAY_CATEGORY",
+            "dataType": "string",
+            "sourceColumn": "DISPLAY_CATEGORY",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "IMAGE_URL",
+            "dataType": "string",
+            "sourceColumn": "IMAGE_URL",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_LOGOS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VDIM_LOGOS].*   FROM [dbo].[VDIM_LOGOS] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VDIM_LOGOS].*   FROM [dbo].[VDIM_LOGOS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_LOGOS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VDIM_PUBLIC_TRANSP_SHAPES",
+        "columns": [
+          {
+            "name": "SHAPE_ID",
+            "dataType": "string",
+            "sourceColumn": "SHAPE_ID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SHAPE_CODE",
+            "dataType": "string",
+            "sourceColumn": "SHAPE_CODE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "LINE_FULL_NAME",
+            "dataType": "string",
+            "sourceColumn": "LINE_FULL_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "LINE_NAME",
+            "dataType": "string",
+            "sourceColumn": "LINE_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "LINE_DIRECTION",
+            "dataType": "string",
+            "sourceColumn": "LINE_DIRECTION",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_PUBLIC_TRANSP_SHAPES",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VDIM_PUBLIC_TRANSP_SHAPES].*   FROM [dbo].[VDIM_PUBLIC_TRANSP_SHAPES] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VDIM_PUBLIC_TRANSP_SHAPES].*   FROM [dbo].[VDIM_PUBLIC_TRANSP_SHAPES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_PUBLIC_TRANSP_SHAPES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VDIM_PUBLIC_TRANSP_STOPS",
+        "columns": [
+          {
+            "name": "STOP_ID",
+            "dataType": "string",
+            "sourceColumn": "STOP_ID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "STOP_CODE",
+            "dataType": "string",
+            "sourceColumn": "STOP_CODE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "STOP_NAME",
+            "dataType": "string",
+            "sourceColumn": "STOP_NAME",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_PUBLIC_TRANSP_STOPS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VDIM_PUBLIC_TRANSP_STOPS].*   FROM [dbo].[VDIM_PUBLIC_TRANSP_STOPS] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VDIM_PUBLIC_TRANSP_STOPS].*   FROM [dbo].[VDIM_PUBLIC_TRANSP_STOPS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_PUBLIC_TRANSP_STOPS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VDIM_WAZE",
+        "columns": [
+          {
+            "name": "ID_WASE",
+            "dataType": "int64",
+            "sourceColumn": "ID_WASE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WASE_CODE",
+            "dataType": "string",
+            "sourceColumn": "WASE_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "LOCALITY",
+            "dataType": "string",
+            "sourceColumn": "LOCALITY",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "END_NODE_STREET_NAME",
+            "dataType": "string",
+            "sourceColumn": "END_NODE_STREET_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ROAD_LENGTH",
+            "dataType": "int64",
+            "sourceColumn": "ROAD_LENGTH",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "ROAD_TYPE",
+            "dataType": "int64",
+            "sourceColumn": "ROAD_TYPE",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "STREET_NAME",
+            "dataType": "string",
+            "sourceColumn": "STREET_NAME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ROAD_TYPE_DESC",
+            "dataType": "string",
+            "sourceColumn": "ROAD_TYPE_DESC",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VDIM_WAZE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VDIM_WAZE].*   FROM [dbo].[VDIM_WAZE] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VDIM_WAZE].*   FROM [dbo].[VDIM_WAZE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VDIM_WAZE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VFACT_EVENTS_CROWD",
+        "columns": [
+          {
+            "name": "LS_EVENT_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_EVENT_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_EVENT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EVENT_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "EVENT_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "LS_DISPLAY_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_DISPLAY_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DISPLAY_LAT",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_LAT",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_LONG",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_LONG",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "DISPLAY_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "DISPLAY_TIME",
+            "dataType": "dateTime",
+            "sourceColumn": "DISPLAY_TIME",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "FLAG_NEAR_EV_vs_AC",
+            "dataType": "boolean",
+            "sourceColumn": "FLAG_NEAR_EV_vs_AC",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "POPULATION",
+            "dataType": "int64",
+            "sourceColumn": "POPULATION",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "COVERAGE",
+            "dataType": "int64",
+            "sourceColumn": "COVERAGE",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VFACT_EVENTS_CROWD",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_CROWD].*   FROM [dbo].[VFACT_EVENTS_CROWD] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_CROWD].*   FROM [dbo].[VFACT_EVENTS_CROWD] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VFACT_EVENTS_CROWD"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "LS_EVENT_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_EVENT_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_EVENT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EVENT_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "EVENT_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "LS_STOP_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_STOP_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "STOP_LAT",
+            "dataType": "double",
+            "sourceColumn": "STOP_LAT",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "STOP_LONG",
+            "dataType": "double",
+            "sourceColumn": "STOP_LONG",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_SHAPE_CODE",
+            "dataType": "string",
+            "sourceColumn": "DISPLAY_SHAPE_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DISPLAY_SHAPE_LAT_1",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_SHAPE_LAT_1",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_SHAPE_LONG_1",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_SHAPE_LONG_1",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_SHAPE_LAT_2",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_SHAPE_LAT_2",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_SHAPE_LONG_2",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_SHAPE_LONG_2",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "M_FLAG_NEAR_EV",
+            "dataType": "int64",
+            "sourceColumn": "M_FLAG_NEAR_EV",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DISPLAY_CATEGORY",
+            "dataType": "string",
+            "sourceColumn": "DISPLAY_CATEGORY",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "IMAGE_URL",
+            "dataType": "string",
+            "sourceColumn": "IMAGE_URL",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "LS_SIZE",
+            "dataType": "int64",
+            "sourceColumn": "LS_SIZE",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES].*   FROM [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES].*   FROM [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "LS_EVENT_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_EVENT_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_EVENT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EVENT_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "EVENT_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "LS_DISPLAY_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_DISPLAY_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DISPLAY_LAT",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_LAT",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "DISPLAY_LONG",
+            "dataType": "double",
+            "sourceColumn": "DISPLAY_LONG",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "M_FLAG_NEAR_EV",
+            "dataType": "int64",
+            "sourceColumn": "M_FLAG_NEAR_EV",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DISPLAY_CATEGORY",
+            "dataType": "string",
+            "sourceColumn": "DISPLAY_CATEGORY",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "LS_SIZE",
+            "dataType": "int64",
+            "sourceColumn": "LS_SIZE",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS].*   FROM [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS].*   FROM [dbo].[VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VFACT_EVENTS_WAZE",
+        "columns": [
+          {
+            "name": "LS_EVENT_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_EVENT_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ID_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_EVENT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EVENT_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "EVENT_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "LS_DISPLAY_CODE",
+            "dataType": "string",
+            "sourceColumn": "LS_DISPLAY_CODE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "TRAFFIC_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "TRAFFIC_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "TRAFFIC_TIME",
+            "dataType": "string",
+            "sourceColumn": "TRAFFIC_TIME",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CONGESTION_LEVEL",
+            "dataType": "int64",
+            "sourceColumn": "CONGESTION_LEVEL",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "AVERAGE_SPEED",
+            "dataType": "int64",
+            "sourceColumn": "AVERAGE_SPEED",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ROAD_LENGTH",
+            "dataType": "int64",
+            "sourceColumn": "ROAD_LENGTH",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "LINE_IMAGE",
+            "dataType": "string",
+            "sourceColumn": "LINE_IMAGE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SIZE",
+            "dataType": "int64",
+            "sourceColumn": "SIZE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ID_POSITION_EVENT",
+            "dataType": "int64",
+            "sourceColumn": "ID_POSITION_EVENT",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VFACT_EVENTS_WAZE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_WAZE].*   FROM [dbo].[VFACT_EVENTS_WAZE] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VFACT_EVENTS_WAZE].*   FROM [dbo].[VFACT_EVENTS_WAZE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VFACT_EVENTS_WAZE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VIEW_BASE_PREDICTION",
+        "columns": [
+          {
+            "name": "StopName",
+            "dataType": "string",
+            "sourceColumn": "StopName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "30MinIntervals",
+            "dataType": "dateTime",
+            "sourceColumn": "30MinIntervals",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "BusEntries",
+            "dataType": "int64",
+            "sourceColumn": "BusEntries",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Hours",
+            "dataType": "int64",
+            "sourceColumn": "Hours",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Time",
+            "dataType": "dateTime",
+            "sourceColumn": "Time",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "DayofWeek",
+            "dataType": "int64",
+            "sourceColumn": "DayofWeek",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagEvent",
+            "dataType": "int64",
+            "sourceColumn": "FlagEvent",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagEventPeak",
+            "dataType": "int64",
+            "sourceColumn": "FlagEventPeak",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagMorning",
+            "dataType": "int64",
+            "sourceColumn": "FlagMorning",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagAfternoon",
+            "dataType": "int64",
+            "sourceColumn": "FlagAfternoon",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagEvening",
+            "dataType": "int64",
+            "sourceColumn": "FlagEvening",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagNight",
+            "dataType": "int64",
+            "sourceColumn": "FlagNight",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagWeekend",
+            "dataType": "int64",
+            "sourceColumn": "FlagWeekend",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FlagRushHour",
+            "dataType": "int64",
+            "sourceColumn": "FlagRushHour",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CrowdNumber",
+            "dataType": "int64",
+            "sourceColumn": "CrowdNumber",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DeleteRows",
+            "dataType": "int64",
+            "sourceColumn": "DeleteRows",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VIEW_BASE_PREDICTION",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[VIEW_BASE_PREDICTION].*   FROM [dbo].[VIEW_BASE_PREDICTION] ",
+              "dataSource": "SqlServer localhost SMART_M_LISBON"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[VIEW_BASE_PREDICTION].*   FROM [dbo].[VIEW_BASE_PREDICTION] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VIEW_BASE_PREDICTION"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "c57d71ce-c5b8-4429-a232-97ab25b07980",
+        "fromTable": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS",
+        "fromColumn": "ID_EVENT",
+        "toTable": "VDIM_EVENTS",
+        "toColumn": "ID_EVENT"
+      },
+      {
+        "name": "95544cb1-472b-47ea-b5bc-9d93e278e3f9",
+        "fromTable": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS",
+        "fromColumn": "DISPLAY_CATEGORY",
+        "toTable": "VDIM_LOGOS",
+        "toColumn": "DISPLAY_CATEGORY"
+      },
+      {
+        "name": "932d43a9-62a3-4d44-89f7-1e756c7b8f90",
+        "fromTable": "VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES",
+        "fromColumn": "ID_EVENT",
+        "toTable": "VDIM_EVENTS",
+        "toColumn": "ID_EVENT"
+      },
+      {
+        "name": "8a751e0a-0666-4434-8695-8f0a1da15e6f",
+        "fromTable": "VFACT_EVENTS_CROWD",
+        "fromColumn": "ID_EVENT",
+        "toTable": "VDIM_EVENTS",
+        "toColumn": "ID_EVENT"
+      },
+      {
+        "name": "ad8857ae-f059-45d7-8fa4-f09998e9b79d",
+        "fromTable": "VFACT_EVENTS_PUBLIC_TRANSPORTS_SHAPES",
+        "fromColumn": "DISPLAY_SHAPE_CODE",
+        "toTable": "VDIM_PUBLIC_TRANSP_SHAPES",
+        "toColumn": "SHAPE_CODE"
+      },
+      {
+        "name": "c73414e2-0d8f-4bff-a9e1-6154c32cae33",
+        "fromTable": "VFACT_EVENTS_PUBLIC_TRANSPORTS_STOPS",
+        "fromColumn": "LS_DISPLAY_CODE",
+        "toTable": "VDIM_PUBLIC_TRANSP_STOPS",
+        "toColumn": "STOP_CODE"
+      },
+      {
+        "name": "d2e29ae0-44de-4fed-b3fa-e23b964dc5e5",
+        "fromTable": "VFACT_EVENTS_WAZE",
+        "fromColumn": "ID_EVENT",
+        "toTable": "VDIM_WAZE",
+        "toColumn": "ID_WASE"
+      },
+      {
+        "name": "e1fde29c-0850-435f-9ed2-3e20517cdd1a",
+        "fromTable": "VFACT_EVENTS_CROWD",
+        "fromColumn": "DISPLAY_TIME",
+        "toTable": "VDIM_TIME",
+        "toColumn": "TIME"
+      },
+      {
+        "name": "b2252a9c-a0a4-431e-ab13-32c2892538ec",
+        "fromTable": "VDIM_DATE",
+        "fromColumn": "FK_DATETIME",
+        "toTable": "VDIM_TIME",
+        "toColumn": "TIME"
+      },
+      {
+        "name": "d7ad053c-2cea-4f34-99b9-ef5f3f896986",
+        "fromTable": "VIEW_BASE_PREDICTION",
+        "fromColumn": "30MinIntervals",
+        "toTable": "VDIM_DATE",
+        "toColumn": "DATETIME"
+      },
+      {
+        "name": "eefbc75b-f275-4046-8bf1-f04fc4edfeee",
+        "fromTable": "VFACT_EVENTS_WAZE",
+        "fromColumn": "ID_EVENT",
+        "toTable": "VDIM_EVENTS",
+        "toColumn": "ID_EVENT"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}
